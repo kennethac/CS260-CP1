@@ -1,0 +1,91 @@
+:root {
+    --primary-color: var(--orange);
+    --accent-color: var(--red);
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.accent-bg {
+    background-color: var(--accent-color);
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    height: 1px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.header-logo-wrapper {
+    background-color: white;
+    border: var(--primary-color) 10px solid;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    background-image: url("/images/blaze_sm.png");
+    background-position: center;
+    background-size: 120px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: calc(50vw - 80px);
+}
+
+.navbar {
+    height: 80px;
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 0.8rem;
+}
+
+footer > a {
+    color: var(--light);
+    text-decoration: underline;    
+}
+
+footer > a:hover {
+    color: var(--primary);
+}
+
+.chart-container {
+    text-align: center;
+    display: inline;
+}
+
+.medium-chart {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.chart-area {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.chart-container {
+    flex: 1 0 auto;
+    min-width: 40vw;
+    display: flex;
+    justify-content: center;
+}
