@@ -35,12 +35,14 @@ body {
     height: 160px;
     width: 160px;
     background-image: url("/images/blaze_sm.png");
+    background-color: white;
     background-position: center;
     background-size: 120px;
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: calc(50vw - 80px);
+    z-index: 100;
 }
 
 .navbar {
@@ -85,7 +87,7 @@ footer > a:hover {
     justify-content: space-between;
 }
 
-.chart-container {
+.chart-area a, .chart-container {
     flex: 1 0 auto;
     min-width: 25vw;
     display: flex;
