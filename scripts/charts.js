@@ -82,8 +82,12 @@ function initChart(context, dataset) {
                 display: true,
                 text: dataset.datasets[0].label,
                 fontSize: 24
-            }
+            },
+            maintainAspectRatio: false
+
         }
+
+
     });
 }
 

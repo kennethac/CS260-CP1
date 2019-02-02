@@ -1,6 +1,7 @@
 :root {
     --primary-color: var(--orange);
     --accent-color: var(--red);
+    --logo-font: 'CharBB';
 }
 
 .primary-bg {
@@ -24,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    padding-top: 50px;
 }
 
 .header-logo-wrapper {
@@ -42,7 +44,7 @@ body {
 }
 
 .navbar {
-    height: 80px;
+    min-height: 80px;
 }
 
 header,
@@ -80,12 +82,36 @@ footer > a:hover {
 .chart-area {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .chart-container {
     flex: 1 0 auto;
-    min-width: 40vw;
+    min-width: 25vw;
     display: flex;
     justify-content: center;
+    padding: 20px;
+}
+
+.flex-entry {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.complete {
+    color: #888;
+}
+
+.day-header {
+    background-color: var(--light);
+    color: var(--primary-color);
+}
+
+th {
+    color: var(--primary-color);
+}
+
+.logo {
+    /* font-family: var(--logo-font);
+    font-size: 3rem; */
 }
