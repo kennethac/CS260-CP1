@@ -17,7 +17,7 @@ class Project {
 function newDummyProject(name, numTasks) {
     let newTasks = [];
     for (var i = 0; i < numTasks; ++i) {
-        let taskName = ` ${name} ${i}`;
+        let taskName = ` ${name.split(' ')[0]} ${i}`;
         let dueDate = new Date().addDays(1 + i);
         let scheduledDate = new Date().addDays(i);
         let complete = Math.random() > 0.5;

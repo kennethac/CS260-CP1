@@ -115,3 +115,25 @@ th {
     /* font-family: var(--logo-font);
     font-size: 3rem; */
 }
+
+.h-center {
+    display: flex;
+    justify-content: center;
+}
+
+.non-flexible {
+    flex: 0 0 auto;
+}
+
+.big-logo {
+    height: 400px;
+    width: 400px;
+    background-image: url("/images/blaze_sm.png");
+    background-size: 340px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: var(--primary-color) solid 15px;
+    border-radius: 50%;
+    margin: 40px;
+}
