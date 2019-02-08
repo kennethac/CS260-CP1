@@ -48,11 +48,11 @@ function createTaskEntry(task, classList) {
     let taskTitle = document.createElement("td");
     taskTitle.appendChild(document.createTextNode(task.name));
     let taskDueDate = document.createElement("td");
-    taskDueDate.appendChild(document.createTextNode(task.dueDate.toDateString()));
+    taskDueDate.appendChild(document.createTextNode(new Date(task.dueDate).toDateString()));
 
     let taskScheduledDate = document.createElement("td");
     if (task.scheduledDate != undefined) {
-        taskScheduledDate.appendChild(document.createTextNode(task.scheduledDate.toDateString()));
+        taskScheduledDate.appendChild(document.createTextNode(new Date(task.scheduledDate).toDateString()));
     }
 
 
@@ -84,7 +84,7 @@ function loadClass(classData) {
     document.querySelector(".class-label").innerText = classData.name;
 
     let soonArea = document.querySelector(".upcoming-area");
-    soon = soon.groupBy((t) => t.scheduledDate.getDay());
+    soon = soon.groupBy((t) => new Date(t.scheduledDate).getDay());
 
     for (var day of soon) {
         soonArea.appendChild(createDayHeader(day.first));
