@@ -1,12 +1,11 @@
-function initializeClassView() {
+async function initializeClassView() {
     let classKey = document.querySelector(".class-container").dataset.class;
-    var classData = undefined;
-    if (classKey = "all") {
-        classData = new Project("All Tasks", []);
-        Object.values(allProjects).reduce((acc, next) => classData.tasks  = classData.tasks.concat(next.tasks));
-    } else {
-        classData = allProjects[classKey];
+    var result = await fetch("http://taskburner.kennethchristensen.me/api/tasks/" + classKey);
+    if (!result.ok) {
+        console.log("Error initializing class from API.");
     }
+
+    var classData = await result.json();
     loadClass(classData);
 }
 
