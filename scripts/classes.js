@@ -79,7 +79,7 @@ function createDayHeader(dayNumber) {
 
 function loadClass(classData) {
     let tasks = classData.tasks;
-    let soon = tasks.filter((t) => t.scheduledDate < new Date().addDays(7));
+    let soon = tasks.filter((t) => new Date(t.scheduledDate) < new Date().addDays(7));
 
     document.querySelector(".class-label").innerText = classData.name;
 
