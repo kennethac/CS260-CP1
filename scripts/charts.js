@@ -2,7 +2,11 @@ async function initCharts() {
     let charts = document.querySelectorAll(".chart");
     for (var chart of charts) {
         let dataSet = chart.dataset.chart;
+        try {
         initChart(chart.getContext('2d'), await getData(dataSet));
+        } catch (e) {
+            console.log("Error.");
+        }
     }
 }
 
